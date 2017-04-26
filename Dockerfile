@@ -16,6 +16,6 @@ RUN mkdir -p /work/goread && \
 		cd $GOPATH/src/github.com/mjibson/goread/app/ && \
 		cp app.sample.yaml app.yaml
 
-EXPOSE 80 8000
+EXPOSE 8080 8000
 WORKDIR $GOPATH/src/github.com/mjibson/goread/app/
 ENTRYPOINT /work/go_appengine/dev_appserver.py --skip_sdk_update_check --host 0.0.0.0 --admin_host 0.0.0.0 --storage_path /work/goread app.yaml
